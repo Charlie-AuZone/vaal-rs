@@ -114,7 +114,7 @@ pub const VAALType_VAAL_F64: VAALType = 14;
 pub type VAALType = ::std::os::raw::c_uint;
 #[doc = " Common bounding box structure used by all decoders.  The box is defined by\n the minimum and maximum coordinates of the x,y points as normalized values.\n Normalized values are in the range 0..1 and can be multiplied by the size of\n an image to de-normalize back to actual pixel locations.\n\n The label is an index which can be used to access the textual label from the\n model or a labels file.\n\n The score's definition is model-specific but generally it is a sigmoid\n processed value."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Copy, Clone, Default)]
 pub struct VAALBox {
     #[doc = " left-most normalized coordinate of the bounding box."]
     pub xmin: f32,
